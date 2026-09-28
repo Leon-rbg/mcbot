@@ -4,7 +4,7 @@ const http = require("http");
 const CONFIG = {
   host: "serverplayer1235.aternos.me",
   port: 12490,
-  username: "DEIN_BOT_NAME",
+  username: "AutoFarmer2",
   auth: "offline",
   reconnectDelay: 10000
 };
