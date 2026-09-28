@@ -1,0 +1,1 @@
+# Debug Team Bot - siehe logs auf /logs
