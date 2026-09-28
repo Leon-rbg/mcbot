@@ -12,6 +12,21 @@ const AUTH = process.env.MC_AUTH || "offline";
 const HTTP_PORT = Number(process.env.PORT || 10000);
 const BOT_COUNT = Number(process.env.BOT_COUNT || 3);
 const BASE_NAME = process.env.MC_USERNAME || "AutoBot";
+const http = require("http");
+
+const PORT = process.env.PORT || 3000;
+
+http.createServer((req, res) => {
+  if (req.url === "/health") {
+    res.writeHead(200, { "Content-Type": "text/plain" });
+    res.end("Bot is running!");
+  } else {
+    res.writeHead(200);
+    res.end("Mineflayer Bot");
+  }
+}).listen(PORT, () => {
+  console.log(`Web server läuft auf Port ${PORT}`);
+});
 
 console.log("=== BOT TEAM START ===");
 console.log(`Host: ${HOST}:${PORT}`);
