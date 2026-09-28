@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: autonomous-mineflayer-bot
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: MC_HOST
+        sync: false
+      - key: MC_PORT
+        value: "25565"
+      - key: MC_USERNAME
+        sync: false
+      - key: MC_VERSION
+        value: ""
